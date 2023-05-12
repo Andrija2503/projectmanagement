@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Item;
 use Illuminate\Http\Request;
 
 class ItemController extends Controller
@@ -11,7 +12,11 @@ class ItemController extends Controller
      */
     public function index()
     {
-        //
+        $all_item = Item::all();
+        $i=0;
+        
+       return view('/index', compact('all_item','i'));
+       
     }
 
     /**
@@ -19,7 +24,7 @@ class ItemController extends Controller
      */
     public function create()
     {
-        //
+        return view('create');
     }
 
     /**
