@@ -32,7 +32,18 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title'=>'required',
+            'description'=>'required',
+            'owner'=>'required',
+            'status'=>'required',
+            'start_date'=>'required',
+            'finish_date'=>'required'
+        ]);
+        
+        Item::create($request->all());
+
+        return redirect()->action([ItemController::class, 'index']);
     }
 
     /**

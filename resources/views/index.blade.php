@@ -3,7 +3,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-lg-12 margin-tb d-flex justify-content-between">
+        <div class="col-lg-12 margin-tb d-flex justify-content-between mt-2">
             <div class="pull-left">
                 <h2>Project Application</h2>
             </div>
@@ -14,7 +14,7 @@
             </div>
         </div>
     </div>
-<table class="table table-striped">
+<table class="table table-striped mt-5">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -23,7 +23,7 @@
         <th scope="col">Start Date</th>
         <th scope="col">Finish Date</th>
         <th scope="col">Status</th>
-        <th scope="col">Action</th>
+        <th scope="col" class="text-center">Action</th>
       </tr>
     </thead>
     <tbody>
@@ -35,7 +35,14 @@
         <td>{{$item->start_date}}</td>
         <td>{{$item->finish_date}}</td>
         <td>{{$item->status}}</td>
-        <td>akcija</td>
+        <td>
+          
+            <div class="d-flex justify-content-around">
+              <a href="" class="btn btn-sm btn-primary px-4">Edit</a>
+              <a href="" class="btn btn-sm btn-danger px-3">Delete</a>
+            </div>
+          
+        </td>
       </tr>
       @endforeach
 
