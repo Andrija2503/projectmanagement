@@ -38,7 +38,7 @@
         <td>
           
             <div class="d-flex justify-content-around">
-              <a href="" class="btn btn-sm btn-primary px-4">Edit</a>
+              <a href="{{route('Item.show', $item->id)}}" class="btn btn-sm btn-primary px-4">Edit</a>
               <a href="" class="btn btn-sm btn-danger px-3">Delete</a>
             </div>
           
