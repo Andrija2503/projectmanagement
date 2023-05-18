@@ -35,7 +35,7 @@
           <li class="list-group-item"><strong>Finish:</strong> {{$item->finish_date}}</li>
         </ul>
         <div class="card-body">
-          <a href="#" class="card-link btn btn-primary d-grid gap-2 col-6 mx-auto">Update</a>
+          <a href="{{route('Item.edit', $item->id)}}" class="card-link btn btn-primary d-grid gap-2 col-6 mx-auto">Change</a>
           
         </div>
       </div>

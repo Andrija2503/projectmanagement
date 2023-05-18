@@ -37,10 +37,15 @@
         <td>{{$item->status}}</td>
         <td>
           
-            <div class="d-flex justify-content-around">
-              <a href="{{route('Item.show', $item->id)}}" class="btn btn-sm btn-primary px-4">Edit</a>
-              <a href="" class="btn btn-sm btn-danger px-3">Delete</a>
-            </div>
+            
+              <div class="d-flex justify-content-around">
+                <a href="{{route('Item.show', $item->id)}}" class="btn btn-sm btn-primary px-4">Edit</a>
+                <form action="{{route('Item.destroy', $item->id)}}" method="POST">
+                  @method('delete')
+                  @csrf
+                <button type="submit" class="btn btn-sm btn-danger px-3">Delete</a>
+              </form>
+              </div>
           
         </td>
       </tr>
@@ -48,10 +53,7 @@
 
     </tbody>
   </table>
-
-
-
-
+  
 @endsection
 
 
